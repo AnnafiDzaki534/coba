@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Dasker</title>
+    <link rel="stylesheet" href="comp/css/bootstrap.css">
+    <link rel="stylesheet" href="comp/css/dasker.css">
+    <link rel="stylesheet" href="comp/css/scrollbar.css">
+<body>
+    <div class="container-fluid h-100">
+        <div class="top-bar fixed-top">
+            <div class="row align-items-center">
+                <div class="app-menu col-md-auto">
+                    <div class="dropdown">
+                        <a class="" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/icons/Menu.svg" alt="Dropdown Icon">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Sync</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="brand-logo col-md-auto">
+                    <a href=""><img src="assets/icons/dasker.svg" alt="Dasker Logo"> Dasker</a>
+                </div>
+                <div class="col-md">
+
+                </div>
+                <div class="account-menu col-auto">
+                    <a href="" class="account-menu-button">
+                        <img class="account-menu-picture" src="assets/img/person.png" alt="Account Profile User" width="25">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-40px h-100">
+            <div class="col-auto sidemenu">
+                <div class="d-grid gap-2">
+                    <button class="btn sidemenu-button d-grid active" type="button"><img src="assets/icons/tasks.svg" class="m-auto" alt="Tasks Icon"> Tasks</button>
+                    <button class="btn sidemenu-button d-grid" type="button"><img src="assets/icons/timer.svg" class="m-auto" alt="Timer Icon"> Timer</button>
+                </div>
+            </div>
+            <div class="col-auto sidebar d-grid">
+                <div class="sidebar-slideGreeting">
+                    <div id="slideGreetings" class="slideGreeting carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators slideGreeting-slideindicator">
+                            <button type="button" data-bs-target="#slideGreetings" data-bs-slide-to="0" class="active slideGreeting-slidedot" aria-current="true" aria-label="Slide 1">
+                                <div></div>
+                            </button>
+                            <button type="button" data-bs-target="#slideGreetings" data-bs-slide-to="1" class="slideGreeting-slidedot" aria-label="Slide 2">
+                                <div></div>
+                            </button>
+                            <button type="button" data-bs-target="#slideGreetings" data-bs-slide-to="2" class="slideGreeting-slidedot" aria-label="Slide 3">
+                                <div></div>
+                            </button>
+                        </div>
+                        <div class="carousel-inner slideGreeting-slidegroup">
+                            <div class="carousel-item slideGreeting-slideitem active">
+                                <div class="d-flex">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p>Good Morning</p>
+                                        <h4>Iydheko</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item slideGreeting-slideitem">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>Check your due tasks</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item slideGreeting-slideitem">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>Relax and do it better!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slideGreeting-slidebutton">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#slideGreetings" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#slideGreetings" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-list">
+                    <div class="d-grid">
+                        <a class="btn sidebar-button active" href=""><img src="assets/icons/dashboard.svg" alt="Dashboard Icon"> Dashboard</a>
+                        <a class="btn sidebar-button" href="">Today</a>
+                        <a class="btn sidebar-button" href="">Draft</a>
+                    </div>
+                    <div class="d-grid">
+                        <p>Your TaskSpace</p>
+                        <a class="btn sidebar-button" href="">School Preparation</a>
+                        <a class="btn sidebar-button" href="">School Homework</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Content -->
+            <div class="col page-content"> 
+
+            </div>
+            
+            <!-- Widget -->
+            <div class="col-auto widget d-grid gap-3">
+                <div class="widget-option">
+                    <a href="" class="widget-option-add"><img src="assets/icons/plus.svg" alt="Add Widget"></a>
+                </div>
+                <div class="widget-goingon">
+                    <h4>Going on</h4>
+                    <div class="d-flex">
+                        <div class="line"></div>
+                        <div class="col tasklist d-grid">
+                            <div class="tasklist-card" data-dasker-taskon="yesterday">
+                                <h5>Send Mail</h5> 
+                                <p>Yesterday, 22 Mar 2024</p>
+                            </div>
+                            <div class="tasklist-card" data-dasker-taskon="today">
+                                <h5>Go Work</h5>
+                                <p>Today, 08:00</p>
+                            </div>
+                            <a href="#" class="btn tasklist-expand">See More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-focus">
+                    <h4>Need to Focus?</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="comp/js/bootstrap.bundle.js"></script>
+    <script src="comp/js/color-thief.min.js"></script>
+    <script src="comp/js/dasker.js"></script>
+    <script>
+
+        const myCarousel = document.getElementById("slideGreetings");
+        const carouselIndicators = myCarousel.querySelectorAll(".carousel-indicators button div");
+        let intervalID;
+
+        const carousel = new bootstrap.Carousel(myCarousel);
+
+        window.addEventListener("load", function () {
+            fillCarouselIndicator(1);
+        });
+
+        myCarousel.addEventListener("slide.bs.carousel", function (e) {
+            let index = e.to;
+            fillCarouselIndicator(++index);
+        });
+
+        function fillCarouselIndicator(index) {
+            let i = 0;
+            for (const carouselIndicator of carouselIndicators) {
+                carouselIndicator.style.width = 0;
+            }
+            clearInterval(intervalID);
+            carousel.pause();
+
+            intervalID = setInterval(function () {
+                i++;
+                myCarousel.querySelector(".carousel-indicators button.active div").style.width = 
+                i + "%";
+
+                if (i >= 100) {
+                    carousel.next();
+                }
+            }, 50);
+        }
+
+    </script>
+</body>
+</html>

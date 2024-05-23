@@ -1,0 +1,204 @@
+body{
+    height: 100vh;
+}
+
+.pt-40px{
+    padding-top: 40px;
+}
+
+@mixin scrollableElements{
+    height: 100%;
+    overflow: auto;
+}
+
+/* Top Bar Styling */
+.top-bar{
+    padding: 0.2rem 1rem;
+    background: #E9E9E9;
+    height: 40px;
+    .account-menu{
+        &-button{
+            padding: 4px;
+            border-radius: 100%;
+            display: flex;
+            &:hover{
+                background: #ddd;
+            }
+        }
+        &-picture{
+            border-radius: 100%;
+        }
+    }
+}
+
+/* Sidemenu Bar Styling */
+.sidemenu{
+    background: #138CE4;
+    border-top-right-radius: 10px;
+    padding: 10px !important;
+    &-button{
+        text-decoration: none;
+        color: #fff;
+        border-color: #fff0 !important;
+        &:hover{
+            background: #3a9ce3;
+            color: #fff;
+        }
+        &.active{
+            background: #4BA6E8;
+            color: #fff;
+            &::after{
+                width: 35px;
+                height: 4px;
+                margin: auto;
+                margin-top: 3px;
+                border-radius: 10px;
+                background-color: #fff;
+                content: "";
+            }
+        }
+    }
+}
+
+.sidebar{
+    background: #EEEEEE;
+    padding: 0;
+    width: 18.75rem;
+    height: 100%;
+    &-slideGreeting{
+        padding: 0 1rem;
+    }
+    &-list{
+        @include scrollableElements;
+        padding: 0 1rem;
+    }
+    &-button{
+        border-radius: 10px;
+        border: 0;
+        text-align: left;    
+        margin-bottom: 5px;
+        --bs-btn-padding-y: 8px;
+        &:hover{
+            background: #E2E2E2;
+        }
+        &.active{
+            background: #dfdede;
+        }
+    }
+}
+
+.slideGreeting{
+    background-color: #ddd;
+    width: 100%;
+    height: 8rem;
+    border-radius: 25px;
+    margin: 15px 0;
+    margin-bottom: 2rem;
+    &:hover{
+        .slideGreeting-slidebutton{
+            opacity: 1 !important;
+        }
+    }
+    &-slidegroup{
+        height: 8rem;
+        border-radius: 25px;
+    }
+    &-slideitem{
+        background: #bbb;    
+        height: 100%;
+        border-radius: 25px;
+    }
+    &-slideindicator{
+        margin-bottom: -1.1rem;
+    }
+    &-slidedot{
+        transition: 0.5s all !important;
+        width: 8px !important;
+        height: 8px !important;
+        border-radius: 10px !important;
+        border: 0 !important;
+        background-color: #CECECE !important;
+        opacity: 1 !important;
+        &.active{
+            width: 50px !important;
+        }
+        div{
+            background: #a5a5a5;
+            border-radius: 10px;
+            height: 100%;
+        }
+    }
+    &-slidebutton{
+        opacity: 0;
+        transition: 0.1s all !important;
+    }
+}
+
+.widget{
+    width: 350px;
+    background: #EEEEEE;
+    @include scrollableElements;
+    &-goingon{
+        background: #DFDFDF;
+        border-radius: 10px;
+        padding: 1rem;
+        .line{
+            width: 3px;
+            background-color: #488AD8;
+        }
+        .tasklist{
+            &-card{
+                border-radius: 10px;
+                padding: 0.7rem 1rem;
+                margin-left: 1rem;
+                height: calc(100% - 0.7rem);
+                margin-bottom: -0.8rem;
+                &[data-dasker-taskon="today"]{
+                    background: #ccc;
+                }
+                &[data-dasker-taskon="yesterday"]{
+                    background: #DB3434;
+                    color: #fff;
+                }
+                h5{
+                    margin-bottom: 0.25rem;
+                }
+                p{
+                    font-size: 14px;
+                    margin-bottom: 0;
+                }
+                &::after{
+                    content: "";
+                    width: 13px;
+                    height: 13px;
+                    background: #1474E4;
+                    display: inline-block;
+                    border-radius: 100%;
+                    position: relative;
+                    bottom: 2.2rem;
+                    right: 2.5rem;
+                }
+            }
+            &-expand{
+                &:hover{
+                    background: #ccc;
+                }
+            }
+        }
+    }
+    &-focus{
+        background: #DFDFDF;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
